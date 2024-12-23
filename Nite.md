@@ -104,3 +104,75 @@ Other incorrect methods you tried:
 References
 
 - No references
+
+<hr>
+<hr>
+
+# Cybernotes
+
+*Flag:* nite{7rY_XKcD_S3b_f0R_3xPl4nA7i0n}
+
+
+**I have not Solved this challenge**
+
+
+How you approached the challenge:
+
+- step 1: Actually in start i had tried some random stuff like /robots.txt and stuff and /uploads worked!! and so after tht there i got like 8 files and on opening log 1 i got the username and password.
+
+- step 2: Then i went back to login page and entered the credentials to get a page having like 4 notes and then i was stuck. Apparently on setting up the dockerfile we get our secret jwt key and on opening burpsuite with this username and password should give us a token and on refreshing the page while proxy is turned on, then send the request to repeater, where you’ll see the original token, change it to the one we got, then send it and ye we should get the flag!
+
+What you learned through solving this challenge:
+
+1. About Jwt keys
+2. About tokens
+
+Other incorrect methods you tried:
+
+- I tried Sqli 
+- Nmap
+- Gobuster
+- Even after using numerous tools i wasnt able to search the vulnerability.
+
+References
+
+- https://github.com/Cryptonite-MIT/niteCTF-2024/tree/main/webex/cybernotes
+- https://abuctf.github.io/posts/NiteCTF2024/#web-exploitation
+
+<hr>
+<hr>
+
+# U Are T Detective
+
+*Flag:* nite{n0n_std_b4ud_r4t3s_ftw}
+
+
+**I have not solved this challenge**
+
+
+How you approached the challenge:
+
+- step 1: In this challenge i had downloaded sigrok pulseview and opened sigmal.sr but had no idea how to continue apparently just seeing the ups and down like fe sub we can get binary codes
+
+- step 2:And after that going to terminal opening python3 and writing this.
+```
+>>> binary = ('01101110','01101001','01110100','01100101', '01111011','01101110','00110000','01101110','01011111','01110011','01110100','01100100','01011111','01100010','00110100','01110101','01100100','01011111','01110010','00110100','01110100','00110011','01110011','01011111','01100110','01110100', '01110111', '01111101')
+>>> convert = [chr(int(b, 2)) for b in binary]
+>>> ascii = ''.join(convert)
+>>> print(ascii)
+nite{n0n_std_b4ud_r4t3s_ftw}
+```
+Should give the flag!
+
+What you learned through solving this challenge:
+
+1. I think if i thought about it for a little longer and not given up i would have gotten the flag
+
+Other incorrect methods you tried:
+
+- No incorrect methods tried
+
+References
+
+- https://github.com/Cryptonite-MIT/niteCTF-2024/tree/main/hardware/u-are-t-detective
+- https://abuctf.github.io/posts/NiteCTF2024/#u-are-t-detective
